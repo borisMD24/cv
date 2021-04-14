@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+$m1 : 1em;
+$m2 : 2em;
+
+$fts1 : 1em;
+$fts2 : 1.5em;
+$fts3 : 2em;
+
+*{
+  transition-duration: 0.5s;
+  padding: .5em;
+  box-sizing: border-box;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #F3E9DC;
+}
+
+.content{
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  .personal{
+    
+ul{
+  list-style: none;
+}
+    font-family: 'Montserrat', sans-serif;
+    .skills{
+      margin-left: 3em;
+    }
+    .profile{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .name{
+        font-size: $fts3;
+      }
+      .job{
+        font-size: 2;
+        margin-bottom: $m2;
+      }
+      .pp{
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+        border-radius: 50%;
+        &:hover{
+          border-radius: 0;
+        }
+      }
+    }
+    .contact{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  .branding{
+    font-family: 'Roboto', sans-serif;
+    section{
+      margin: 2em 0;
+    }
+  }
+}
+
+.described{
+  position: relative;
+  .description{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  &:hover{
+    .description{
+      background-color: #fff;
+      display: block;
+      .source{
+        &::before{
+          content: "Source : ";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+* {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  padding: .5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #F3E9DC;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.content .personal {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content .personal ul {
+  list-style: none;
+}
+
+.content .personal .skills {
+  margin-left: 3em;
+}
+
+.content .personal .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .personal .profile .name {
+  font-size: 2em;
+}
+
+.content .personal .profile .job {
+  font-size: 2;
+  margin-bottom: 2em;
+}
+
+.content .personal .profile .pp {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.content .personal .profile .pp:hover {
+  border-radius: 0;
+}
+
+.content .personal .contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .branding {
+  font-family: 'Roboto', sans-serif;
+}
+
+.content .branding section {
+  margin: 2em 0;
+}
+
+.described {
+  position: relative;
+}
+
+.described .description {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+.described:hover .description {
+  background-color: #fff;
+  display: block;
+}
+
+.described:hover .description .source::before {
+  content: "Source : ";
+}
+/*# sourceMappingURL=main.css.map */
