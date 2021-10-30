@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*:not(span):not(a) {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   padding: .5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #222f3e;
+  color: wheat;
+}
+
+a {
+  color: #ADD8E6;
+}
+
+i {
+  color: white;
 }
 
 html, body {
@@ -26,6 +37,10 @@ html, body {
 
 .content .personal {
   font-family: 'Montserrat', sans-serif;
+}
+
+.content .personal ul, .content .personal li {
+  font-family: 'Roboto', sans-serif;
 }
 
 .content .personal ul {
@@ -56,7 +71,13 @@ html, body {
   font-size: 2em;
 }
 
+.content .personal .profile .name .aka {
+  font-size: .35em;
+  margin: 0 -0.5em;
+}
+
 .content .personal .profile .job {
+  font-family: 'Roboto', sans-serif;
   font-size: 2;
   margin-bottom: 2em;
 }
@@ -99,6 +120,7 @@ html, body {
 
 .described {
   position: relative;
+  text-decoration: underline;
 }
 
 .described .description {
@@ -106,11 +128,21 @@ html, body {
   top: 100%;
   left: 0;
   display: none;
+  z-index: 5;
+  width: 25vw;
+  padding: 1em;
+  border-radius: 0em;
+  opacity: 0;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 .described:hover .description {
-  background-color: #fff;
+  background-color: #395069;
   display: block;
+  z-index: 5;
+  opacity: 100;
+  border-radius: 1em;
 }
 
 .described:hover .description .source::before {

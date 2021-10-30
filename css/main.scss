@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 $m1 : 1em;
 $m2 : 2em;
@@ -7,10 +8,20 @@ $fts1 : 1em;
 $fts2 : 1.5em;
 $fts3 : 2em;
 
-*{
+*:not(span):not(a){
   transition-duration: 0.5s;
   padding: .5em;
   box-sizing: border-box;
+  background-color: #222f3e;
+  color: wheat;
+}
+
+a{
+  color : #ADD8E6;
+}
+
+i{
+  color: white;
 }
 
 html, body{
@@ -28,9 +39,12 @@ html, body{
   grid-template-columns: 40% 60%;
   .personal{
     
-ul{
-  list-style: none;
-}
+    ul, li {
+      font-family: 'Roboto', sans-serif;
+    }
+    ul{
+      list-style: none;
+    }
     font-family: 'Montserrat', sans-serif;
     .skills{
       margin-left: 3em;
@@ -42,8 +56,13 @@ ul{
       flex-direction: column;
       .name{
         font-size: $fts3;
+        .aka{
+          font-size: .35em;
+          margin: 0 -0.5em;
+        }
       }
       .job{
+        font-family: 'Roboto', sans-serif;
         font-size: 2;
         margin-bottom: $m2;
       }
@@ -75,16 +94,26 @@ ul{
 
 .described{
   position: relative;
+  text-decoration: underline;
   .description{
     position: absolute;
     top: 100%;
     left: 0;
     display: none;
+    z-index: 5;
+    width: 25vw;
+    padding: 1em;
+    border-radius: 0em;
+    opacity: 0;
+    transition-duration: .5s;
   }
   &:hover{
     .description{
-      background-color: #fff;
+      background-color: #395069;
       display: block;
+      z-index: 5;
+      opacity: 100;
+      border-radius: 1em;
       .source{
         &::before{
           content: "Source : ";
